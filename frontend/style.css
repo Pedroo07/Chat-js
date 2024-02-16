@@ -8,7 +8,7 @@
 }
 
 body {
-    background: url("../frontend/img/background.png");
+    background: url("./background.png");
     color: #f2f2f2;
 }
 
