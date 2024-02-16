@@ -18,7 +18,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 .login {
@@ -83,10 +82,10 @@ body {
 
 .chat_messages {
     flex-grow: 1;
-    padding: 1.9rem 1.9rem 5rem;
+    padding: 30px 30px 90px;
     display: flex;
     flex-direction: column;
-    justify-content:flex-end;
+    justify-content: flex-end;
 }
 
 .chat_form {
@@ -97,6 +96,7 @@ body {
     gap: 0.6rem;
     position: fixed;
     bottom: 0;
+    left: 0;
     width: 100%;
 }
 
@@ -108,7 +108,7 @@ body {
     background-color: #212121;
     outline: none;
     color: #f2f2f2;
-    font-size: 1rem; 
+    font-size: 1rem;
 }
 
 .chat_button {
@@ -117,32 +117,38 @@ body {
     color: #f2f2f2;
     cursor: pointer;
 }
-.chat_button span{
+
+.chat_button span {
     font-size: 1.8rem;
 }
-.chat_messages div{
+
+.chat_messages > div {
     padding: 10px;
     width: 100%;
     max-width: 250px;
     font-size: 0.9rem;
     font-weight: 500;
-    margin-bottom: 1rem;
-    line-height: 1.4rem;
+    margin-bottom: 15px;
+    line-height: 22px;
 }
-.send_message{
+
+.send_message {
     background-color: #ddd;
-    align-self: flex-end;
     color: #121212;
     border-radius: 10px 10px 0 10px;
+    align-self: flex-end;
 }
-.get_message{
+
+.get_message {
     color: #fff;
     background-color: #333;
-    border-radius: 0 10px 10px 10px; 
+    border-radius: 0 10px 10px 10px;
+    align-self: flex-start;
 }
-.sender{
+
+.sender {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
     font-weight: 600;
     color: aqua;
 }

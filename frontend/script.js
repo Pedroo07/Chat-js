@@ -26,6 +26,13 @@ const user = {
 
 let websocket
 
+const scrollBar = () => {
+    window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: "smooth"
+    })
+}
+
 const createdMessageSelf = (content) => {
     const div = document.createElement('div')
     div.classList.add('send_message')
@@ -57,6 +64,7 @@ const processMessage = ({ data }) => {
     const VerifiedMessage = userId == user.id ? createdMessageSelf(content) : createdMessageGet(content, userName,userColor)
 
     chatMsg.appendChild(VerifiedMessage)
+    scrollBar()
 }
 
 const handleSubmit = (event) => {
