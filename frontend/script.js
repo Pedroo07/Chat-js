@@ -54,9 +54,9 @@ const getRandomColor = () => {
 const processMessage = ({ data }) => {
     const { userId, userColor, userName, content } = (JSON.parse(data))
 
-    const element = createdMessageGet(content, userName,userColor)
+    const VerifiedMessage = userId == user.id ? createdMessageSelf(content) : createdMessageGet(content, userName,userColor)
 
-    chatMsg.appendChild(element)
+    chatMsg.appendChild(VerifiedMessage)
 }
 
 const handleSubmit = (event) => {
