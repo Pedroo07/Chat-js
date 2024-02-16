@@ -34,7 +34,7 @@ body {
     text-align: center;
     font-weight: 600;
     font-size: 1.5rem;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
 }
 
 .login_form {
@@ -84,6 +84,10 @@ body {
 
 .chat_messages {
     flex-grow: 1;
+    padding: 1.9rem 1.9rem 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-end;
 }
 
 .chat_form {
@@ -91,7 +95,7 @@ body {
     padding: 15px 20px;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 0.6rem;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -100,7 +104,7 @@ body {
 .chat_input {
     border: none;
     padding: 1rem;
-    border-radius: 8px;
+    border-radius: 0.5rem;
     flex-grow: 1;
     background-color: #212121;
     outline: none;
@@ -116,4 +120,30 @@ body {
 }
 .chat_button span{
     font-size: 1.8rem;
+}
+.chat_messages div{
+    padding: 10px;
+    width: 100%;
+    max-width: 250px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    line-height: 1.4rem;
+}
+.send_message{
+    background-color: #ddd;
+    align-self: flex-end;
+    color: #121212;
+    border-radius: 10px 10px 0 10px;
+}
+.get_message{
+    color: #fff;
+    background-color: #333;
+    border-radius: 0 10px 10px 10px; 
+}
+.sender{
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 700;
+    color: aqua;
 }
