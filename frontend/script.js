@@ -1,6 +1,11 @@
 const login = document.querySelector('.login')
 const loginForm = document.querySelector('.login_form')
 const loginInput= document.querySelector('.login_input')
+
+const chat = document.querySelector('.chat')
+const chatForm = document.querySelector('.chat_form')
+const chatInput= document.querySelector('.chat_input')
+
 const colors = [
     "aqua",
     "blueviolet",
@@ -26,6 +31,8 @@ event.preventDefault()
 user.id = crypto.randomUUID()
 user.name = loginInput.value
 user.color = getRandomColor()
+login.style.display = 'none'
+chat.style.display = "flex"
 console.log(user)
 }
 
