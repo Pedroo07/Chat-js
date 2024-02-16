@@ -27,11 +27,25 @@ const user = {
 let websocket
 
 const createdMessageSelf = (content) => {
-const div = document.createElement('div')
-div.classList.add('send_message')
-div.innerHTML = content
-return div
-} 
+    const div = document.createElement('div')
+    div.classList.add('send_message')
+    div.innerHTML = content
+    return div
+}
+const createdMessageGet = (content, sender, senderColor) => {
+    const div = document.createElement('div')
+    const span =  document.createElement('span')
+    span.style.color = senderColor
+    span.classList.add('sender')
+    div.classList.add('get_message')
+
+    div.appendChild(span)
+
+    span.innerHTML  = sender
+    div.innerHTML += content
+
+    return div
+}
 
 const getRandomColor = () => {
     const randomIndex = Math.floor(Math.random() * colors.length)
@@ -39,7 +53,9 @@ const getRandomColor = () => {
 }
 const processMessage = ({ data }) => {
     const { userId, userColor, userName, content } = (JSON.parse(data))
-    const element = createdMessageSelf(content)
+
+    const element = createdMessageGet(content, userName,userColor)
+
     chatMsg.appendChild(element)
 }
 
