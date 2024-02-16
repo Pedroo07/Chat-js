@@ -6,6 +6,7 @@ const chat = document.querySelector('.chat')
 const chatForm = document.querySelector('.chat_form')
 const chatInput = document.querySelector('.chat_input')
 const chatMsg = document.querySelector('.chat_messages')
+let websocket
 
 const colors = [
     "aqua",
@@ -16,15 +17,12 @@ const colors = [
     "mediumspringgreen",
     "maroon"
 ]
+
 const user = {
     id: "",
     name: "",
     color: ""
 }
-
-
-
-let websocket
 
 const scrollBar = () => {
     window.scrollTo({
@@ -39,6 +37,7 @@ const createdMessageSelf = (content) => {
     div.innerHTML = content
     return div
 }
+
 const createdMessageGet = (content, sender, senderColor) => {
     const div = document.createElement('div')
     const span =  document.createElement('span')
@@ -77,7 +76,7 @@ const handleSubmit = (event) => {
     login.style.display = 'none'
     chat.style.display = "flex"
 
-    websocket = new WebSocket('ws://localhost:8080')
+    websocket = new WebSocket('wss://chat-js-s5xl.onrender.com')
     websocket.onmessage = processMessage
 
 }
